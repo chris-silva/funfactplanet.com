@@ -1,0 +1,11 @@
+background-color: #003399;
+
+#Main {
+	background-color: #ccffcc;
+	float: left;
+	top: auto;
+	width: 650px;
+	min-height: 800px;
+}
+
+http://stackoverflow.com/questions/2214141/auto-increment-after-delete-in-mysql

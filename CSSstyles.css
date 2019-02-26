@@ -1,0 +1,143 @@
+@charset "utf-8";
+body {
+	/*background-color: white;*/
+	/*background-image: url("images/blue_space.png");*/
+	background-repeat: repeat-y;
+	background-position: center;
+}
+
+#Footer {
+	background-color: #b6c0d2;
+	height: 50px;
+	clear: both; /*without this the main div kept overlapping and some of the styles were not working*/
+	text-align: center;
+	width: 100%;
+}
+
+#MainContainer {
+	width: 75%;
+	margin: auto;
+	position: relative;
+	min-height:1200px;
+}
+#Main {
+	background-color: #ccffcc;
+	float: left;
+	top: auto;
+	width: 54%;
+	min-height: 1000px;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+#Sidebar {
+	float: left;
+	width: 20%;
+	background-color: #FFFFFF;
+	min-height: 800px;
+	
+}
+
+#Sidebar a {
+	text-decoration: none;
+}
+
+#sidebar img {
+	/*margin-top: 4%;*/
+}
+
+#rightBanner {
+	background-color: #FFF;
+	float: right;
+	width: 20%;
+	/*
+	padding-left: 2%;
+	padding-right: 2%;
+	*/
+	min-height: 800px;
+}
+
+#dailyFact {
+	background-color: lightblue;
+        margin-right: auto;
+	margin-left: auto;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#registration {
+        padding-left: 8%;
+}
+
+.firstLetter {
+	font-size: 36px;
+	color: #F00;
+	text-align: center;
+}
+
+#LogoHeader {
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	/*background-color: #0099cc;*/
+	background-color: white;
+	margin-top: 0px;
+	border: thin solid #FFF;
+}
+
+#Header {
+	/*background-color: #b6c0d2;*/
+	background-color: lightblue;
+	height: auto;
+	border: thin solid #FFF;
+	text-align: center;
+}
+
+#NavBar ul {
+	
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+#NavBar li {
+    float: left;
+}
+
+#NavBar li a {
+    display: block;
+    padding: 14px 26px;
+    background-color: #dddddd;
+	text-decoration: none;
+	color: dimgrey;
+}
+
+#NavBar li a:hover {
+	background-color: ghostwhite;
+}
+
+
+#topBanner {
+	/*width: 1000px;*/
+	width: 75%;
+}
+
+
+
+.Letter {
+	font-size: 48px;
+	color: #906;
+}
+
+
+#Tablediv {
+	background-color: #66ccff;
+}
+
+#Tablediv table {
+	float: left;
+}
+

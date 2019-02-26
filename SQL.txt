@@ -1,0 +1,127 @@
+
+CREATE DATABASE funfacts;
+
+USE funfacts;
+
+CREATE TABLE facts (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+fact VARCHAR(750),
+author VARCHAR(128),
+categories VARCHAR(128),
+likes INT,
+dislikes INT,
+flag INT
+
+) ENGINE MyISAM;
+
+DESCRIBE facts;
+
+INSERT INTO facts(id, fact, categories, author) VALUES(1, 'The World\'s largest art gallery is the Winter Palace and Hermitage is St. Peterburg, Russia. Visitors would have to walk 15 miles to see the 322 galleries which house nearly 3 million works of art.', 'art', 'admin');
+INSERT INTO facts(id, fact, categories, author) VALUES(2, 'Vincent Van Gogh painted his last painting, "Cornfield with Crows," and shot himself at age 37.', 'art', 'admin');
+INSERT INTO facts(id, fact, categories, author) VALUES(3, 'When young and impoverished, Pablo Picasso kept warm by burning his own paintings.', 'art', 'admin');
+INSERT INTO facts(id, fact, categories, author) VALUES(4, 'Vincent Van Gogh shot and killed himself while painting "Wheatfield with Crows."', 'art', 'admin');
+
+SELECT * FROM facts;
+
+//create table
+
+CREATE TABLE members (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+user VARCHAR(16),
+pass VARCHAR(16),
+summary VARCHAR(200)
+
+) ENGINE MyISAM;
+
+CREATE TABLE categories (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+category VARCHAR(16),
+numOfFacts INT
+
+) ENGINE MYISAM;
+
+
+CREATE TABLE likes (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+factid INT,
+userid INT
+) ENGINE MyISAM;
+
+CREATE TABLE dislikes (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+factid INT,
+userid INT
+) ENGINE MyISAM;
+CREATE TABLE dislikes (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+factid INT,
+userid INT
+) ENGINE MyISAM;
+
+CREATE TABLE flags (
+
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+factid INT,
+userid INT
+) ENGINE MyISAM;
+
+INSERT INTO members(id, user, pass) VALUES(1, 'chris', 'c270');
+INSERT INTO categories(id, category) VALUES(1, 'crime');
+INSERT INTO categories(id, category) VALUES(2, 'sports');
+INSERT INTO categories(category, numOfFacts) VALUES('water', 0);
+
+//view the table
+SELECT * FROM categories;
+SELECT * FROM facts WHERE category = 5;
+
+//Renaming a Table
+RENAME TABLE `LabOne` TO `Lab1`;   
+
+//Renaming a Column
+ALTER TABLE lab1 CHANGE `COL 5` `age` varchar(5);
+
+//Changing a column type
+ALTER TABLE lab1 MODIFY age INT;
+
+//Adding a new column
+ALTER TABLE members ADD summary VARCHAR(500);
+ALTER TABLE facts ADD likes INT UNSIGNED;
+ALTER TABLE facts ADD dt DATETIME; 
+
+//Removing a column p176
+ALTER TABLE classics DROP pages;
+
+//update
+UPDATE members SET summary = 'I am Chris, the webmaster of this website. In the future, this will be the definitive facts website in the internet' WHERE user='chris';
+UPDATE facts SET CATEGORY = 5 WHERE id = 2;
+
+//adding new facts
+INSERT INTO facts(fact, categories, author) VALUES('Clothes that are dried outside do smell better because of a process called photolysis. What happens is this: sunlight breaks down compounds in the laundry that cause odor, such as perspiration and body oils.', 'clothes', 'chris');
+
+//delete facts
+DELETE FROM facts WHERE id=1;
+
+$query = "SELECT user, pass FROM members WHERE BINARY user='$user' AND pass = '$pass'";
+(BINARY fixed mysql case insensitivity)
+
+UPDATE facts SET CATEGORY = 6 WHERE id IN (8, 9, 10, 11, 12);
+
+$query = "SELECT * FROM categories ORDER BY category ASC";
+
+//update a field in all rows
+update facts set flag=0;
+
+CREATE TABLE fecha (
+id INT UNSIGNED NOT NULL AUTO_INCREMENT KEY,
+f DATETIME
+    ) ENGINE MyISAM;
+
+INSERT INTO fecha(f) VALUES('2010-12-03 22:23:02'); 
+
+$mysqltime = date ("Y-m-d H:i:s", $phptime);

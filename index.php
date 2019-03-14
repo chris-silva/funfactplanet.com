@@ -14,7 +14,7 @@ $rowsX = mysqli_num_rows($resultX);
 
 echo <<< _END
 
-<h2>Welcome</h2>
+<h2>Welcome2</h2>
 
 <p>funfactplanet.com is an online community where fun fact enthusiasts can
 congregate to find and share facts. If you wish to post a fact just sign in
